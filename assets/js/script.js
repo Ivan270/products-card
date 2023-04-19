@@ -31,27 +31,8 @@ let teclado4 = new Producto(
 	'https://media.solotodo.com/media/products/1678403_picture_1670410711.jpg'
 );
 
-let displayModelo = document.getElementById('productModel');
-let displayMarca = document.getElementById('productBrand');
-let displayPrecio = document.getElementById('productPrice');
-let displayImage = document.getElementById('productImage');
-let btnAlternativa = document.getElementById('btnAlternativa');
-
-let mostrarProducto = (producto) => {
-	displayModelo.innerHTML = producto.model;
-	displayMarca.innerHTML = producto.brand;
-	displayPrecio.innerHTML = producto.price.toLocaleString('es-CL', {
-		style: 'currency',
-		currency: 'CLP',
-	});
-	displayImage.setAttribute('src', producto.img);
-};
-
 let productos = [];
-productos.push(teclado1);
-productos.push(teclado2);
-productos.push(teclado3);
-productos.push(teclado4);
+productos.push(teclado1, teclado2, teclado3, teclado4);
 
 // Recorre array de productos, con cada click muestra un producto distinto dependiendo de su ubicacion en el array
 let index = 0;
@@ -64,3 +45,13 @@ btnAlternativa.addEventListener('click', () => {
 	}
 	index++;
 });
+// Muestra producto seleccionado en el card
+let mostrarProducto = (producto) => {
+	productModel.innerHTML = producto.model;
+	productBrand.innerHTML = producto.brand;
+	productPrice.innerHTML = producto.price.toLocaleString('es-CL', {
+		style: 'currency',
+		currency: 'CLP',
+	});
+	productImage.setAttribute('src', producto.img);
+};
