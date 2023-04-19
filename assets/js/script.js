@@ -17,6 +17,19 @@ let teclado2 = new Producto(
 	283290,
 	'https://media.solotodo.com/media/products/1623783_picture_1657640378.jpg'
 );
+let teclado3 = new Producto(
+	'Corsair',
+	'K63 Wireless',
+	89000,
+	'https://media.solotodo.com/media/products/831684_picture_1541125122.png'
+);
+
+let teclado4 = new Producto(
+	'Redragon',
+	'K605 Alien Big Size',
+	195000,
+	'https://media.solotodo.com/media/products/1678403_picture_1670410711.jpg'
+);
 
 let displayModelo = document.getElementById('productModel');
 let displayMarca = document.getElementById('productBrand');
@@ -37,6 +50,8 @@ let mostrarProducto = (producto) => {
 let productos = [];
 productos.push(teclado1);
 productos.push(teclado2);
+productos.push(teclado3);
+productos.push(teclado4);
 
 // Recorre array de productos, con cada click muestra un producto distinto dependiendo de su ubicacion en el array
 let index = 0;
